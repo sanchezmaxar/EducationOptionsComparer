@@ -1,0 +1,59 @@
+/* ensure all pages have Bootstrap CSS */
+// $primary: purple;
+// $secondary: black;
+// $dark: blue;
+// $light: black;
+// $danger: red;
+// $info: orange;
+// $success: green;
+// $warning: yellow;
+// $theme-colors: (
+//   "primary":    $primary,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark
+// );
+@import "bootstrap";
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+.workspace {
+  background-color:$secondary;
+  height:80vh;
+}
+.option-card{
+  background: #fff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+// .md-container {
+//   max-width: 800px;
+//   padding-top: 2rem;
+// }
+
+// .sml-card {
+//   width: 22rem;
+//   margin: 1rem 0;
+// }
+
+// .cntr-footer {
+//   height: 80px;
+//   margin-top: 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-top: 1px solid #ccc;
+// }
+
+// .sml-logo {
+//   height: 1em;
+//   margin-left: 10px;
+// }
+
