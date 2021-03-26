@@ -17,6 +17,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-editext": "^3.17.2",
+    "react-inline-editing": "^1.0.10",
     "react-rnd": "^10.2.4",
     "sass": "^1.32.8"
   },
