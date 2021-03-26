@@ -1,14 +1,13 @@
 import React from 'react';
-import { CustomNavBar, Workspace } from '..';
+import { CustomFooter, CustomNavBar } from '..';
 
 const Layout = ({
   children,
 }) => (
   <>
     <CustomNavBar />
-    <Workspace>
-      {children}
-    </Workspace>
+    {children}
+    <CustomFooter />
   </>
 );
 

@@ -32,6 +32,25 @@
     margin: 10px;
     padding: 10px;
     float: left;
+    position: relative;
+}
+.custom-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #1153aa;
+  opacity: 0.75;
+  border-radius: 4px;
+}
+.custom-handle-sw {
+  bottom: -4px;
+  left: -4px;
+  cursor: sw-resize;
+}
+.custom-handle-se {
+  bottom: -4px;
+  right: -4px;
+  cursor: se-resize;
 }
 // .md-container {
 //   max-width: 800px;
