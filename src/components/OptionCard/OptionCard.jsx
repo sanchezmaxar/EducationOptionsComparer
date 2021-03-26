@@ -26,11 +26,10 @@ const OptionCard = () => {
         x: 0,
         y: 0,
         width: 320,
-        height: 200,
       }}
       disableDragging={dragIsDisable}
       bounds="parent"
-      className="p-2"
+      className="p-2 min-h-100 h-fit-content"
     >
       <Card className="min-h-100 h-fit-content">
         <Card.Header>
@@ -40,7 +39,7 @@ const OptionCard = () => {
             inputClassName="myInputClass"
             inputWidth="200px"
             inputHeight="25px"
-            inputMaxLength="50"
+            inputMaxLength={50}
             labelFontWeight="bold"
             inputFontWeight="bold"
             onFocus={handleFocus}
