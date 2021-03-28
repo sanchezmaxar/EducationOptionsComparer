@@ -15,7 +15,7 @@
     "bootstrap": "^5.0.0-beta2",
     "next": "latest",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
+    "react-bootstrap-v5": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-editext": "^3.17.2",
     "react-inline-editing": "^1.0.10",

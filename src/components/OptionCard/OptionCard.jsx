@@ -1,4 +1,4 @@
-import { Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap-v5';
 import { Rnd } from 'react-rnd';
 import React, { useState } from 'react';
 import EditableLabel from 'react-inline-editing';

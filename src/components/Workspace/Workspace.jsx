@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap-v5';
 import { OptionCard } from '..';
 import CustomToolbar from '../CustomToolbar';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Navbar, Nav,
-} from 'react-bootstrap';
+} from 'react-bootstrap-v5';
 
 const CustomNavBar = () => (
   <Navbar expand="lg" bg="dark" variant="dark">
