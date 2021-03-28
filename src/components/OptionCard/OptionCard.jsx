@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import EditableLabel from 'react-inline-editing';
 import EdiText from 'react-editext';
 
-const OptionCard = () => {
+const OptionCard = ({ title, chars, position }) => {
   const [dragIsDisable, setDragIsDisable] = useState(false);
   const handleFocus = () => {
     setDragIsDisable(true);
@@ -12,19 +12,46 @@ const OptionCard = () => {
   const handleFocusOut = () => {
     setDragIsDisable(false);
   };
-  const onSaveHandler=()=>{
-    console.log();
+  const onSaveHandler = () => {
     setDragIsDisable(false);
- } ;
- const onEditingStartHandler=()=>{
-  setDragIsDisable(true);
- };
+  };
+  const onEditingStartHandler = () => {
+    setDragIsDisable(true);
+  };
+  const charList = [];
+  Object.keys(chars).forEach((key) => {
+    charList.push(
+      <div className="row" key={`char-div-${chars[key]?.id}`}>
+        <div className="col-6">
+
+          <span key={`char-label-${chars[key]?.id}`} className="d-inline mr-1">
+            {chars[key]?.desc}
+            :
+          </span>
+        </div>
+        <div className="col-6">
+          <EditableLabel
+            key={`char-edit-${chars[key].id}`}
+            text={chars[key]?.value.toString()}
+            labelClassName="char-label"
+            inputClassName="form-control"
+            inputMaxLength={50}
+            labelFontWeight="bold"
+            inputFontWeight="bold"
+            onFocus={handleFocus}
+            onFocusOut={handleFocusOut}
+          />
+        </div>
+        <hr/>
+      </div>,
+    );
+  });
 
   return (
     <Rnd
       default={{
-        x: 0,
-        y: 0,
+        x: position.x,
+        y: position.y,
         width: 320,
       }}
       disableDragging={dragIsDisable}
@@ -34,7 +61,7 @@ const OptionCard = () => {
       <Card className="min-h-100 h-fit-content">
         <Card.Header>
           <EditableLabel
-            text="Hello!"
+            text={title}
             labelClassName="myLabelClass"
             inputClassName="myInputClass"
             inputWidth="200px"
@@ -48,22 +75,9 @@ const OptionCard = () => {
           />
         </Card.Header>
         <Card.Body className="h-fit-content">
-          <EdiText
-            type="textarea"
-            inputProps={{
-              className: 'textarea',
-              placeholder: 'Type your content here',
-              style: {
-                outline: 'none',
-                minWidth: 'auto',
-              },
-              rows: 5,
-            }}
-            value="How do you define real? If you're talking about what you can feel, what you can smell,\
-  what you can taste and see, then real is simply electrical signals interpreted by your brain"
-            onSave={onSaveHandler}
-            onEditingStart={onEditingStartHandler}
-          />
+          <div className="container" key={title}>
+          {charList}
+          </div>
         </Card.Body>
       </Card>
     </Rnd>
